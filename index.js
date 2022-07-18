@@ -39,6 +39,6 @@ app.get('/top-headlines', async (req,res)=>{
  })
 
 
-app.listen(8000,()=>{
+app.listen(process.env.PORT || 8000,()=>{
     console.log('poost running : 8000')
 })
