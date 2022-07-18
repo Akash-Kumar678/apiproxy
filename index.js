@@ -2,6 +2,12 @@ import express from 'express'
 const app = express()
 import fetch from 'node-fetch'
 
+
+app.get('/',(req,res)=>{
+	res.send('api available at /search/search-Paramenter  /top-headlines  /bbc  /category/categoryName')
+})
+
+
 app.get('/search/:userQuery', async (req,res)=>{
    const userQuery = req.params.userQuery
     const url  = `https://newsapi.org/v2/everything?q=${userQuery}&apiKey=e231658e9222455abd52a3d89d4c126b`
